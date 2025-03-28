@@ -1,0 +1,83 @@
+---
+import TerminalContent from './TerminalContent';
+---
+
+<div class="terminal">
+  <div class="terminal-header">
+    <div class="terminal-buttons">
+      <span class="terminal-button close"></span>
+      <span class="terminal-button minimize"></span>
+      <span class="terminal-button maximize"></span>
+    </div>
+    <div class="terminal-title">user@portfolio ~ </div>
+  </div>
+  <div class="terminal-body">
+    <TerminalContent client:load />
+  </div>
+</div>
+
+<style>
+  .terminal {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    background-color: #1c2128;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .terminal-header {
+    background-color: #161b22;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #30363d;
+  }
+
+  .terminal-buttons {
+    display: flex;
+    gap: 8px;
+    margin-right: 15px;
+  }
+
+  .terminal-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+
+  .close {
+    background-color: #f85149;
+  }
+
+  .minimize {
+    background-color: #ffa33a;
+  }
+
+  .maximize {
+    background-color: #3fb950;
+  }
+
+  .terminal-title {
+    font-size: 14px;
+    color: #8b949e;
+  }
+
+  .terminal-body {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    .terminal {
+      height: 400px;
+    }
+  }
+</style>
+
+
