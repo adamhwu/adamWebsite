@@ -10,18 +10,17 @@ const commands = {
 - projects: View my projects
 - contact: How to reach me
 - clear: Clear the terminal`,
-	about: `Hi there! I'm a developer passionate about creating unique web experiences.
-I love combining creativity with technical skills to build memorable projects.
-Type 'skills' to see what I can do or 'projects' to see my work.`,
+	about: `Hello! I am a sophomore computer engineering student at UCI interested in computer architecture and lower level computing!
+More specifically I am interested in FPGA development, hardware accelerators, and machine learning.`,
 	skills: `Technical Skills:
-- Frontend: HTML, CSS, JavaScript, React, Astro, Vue
-- Backend: Node.js, Express, Python, Django
-- Other: Git, Docker, AWS, Figma`,
+- Programming languages: Python, C/C++, Verilog, HLS, JavaScript
+- Hardware: STM32, PCB Design, SMD and THT soldering
+- Other: Git, Linux/Unix`,
 	projects: `My Projects:
-1. Personal Portfolio - A terminal-themed website (you're looking at it!)
-2. E-commerce Platform - Built with React and Node.js
+1. Micromouse - Autonomouse maze-solving competition robot 'mouse'
+2. Profilometer - Open-source tool for UC Davis' Pavement Research Center
 3. Weather App - Using OpenWeather API
-4. Task Management System - Full-stack application
+4. Personal Portfolio - A terminal-themed website (you're looking at it!)
   
 Type 'contact' to see how you can reach out about these projects.`,
 	contact: `Get in touch:
@@ -53,7 +52,7 @@ const TerminalContent = () => {
 					setTypingText(initialText.substring(0, typingIndex + 1))
 					setTypingIndex(typingIndex + 1)
 				},
-				50 + Math.random() * 50,
+				50 + Math.random() * 30,
 			)
 
 			return () => clearTimeout(timeout)
