@@ -81,10 +81,10 @@ const TerminalContent = () => {
 	}, [])
 
 	// Scroll to bottom when history changes
-	useEffect(() => {
-		terminalEndRef.current?.scrollIntoView({ behavior: "smooth" })
-	}, [history])
-
+	//useEffect(() => {
+	//	terminalEndRef.current?.scrollIntoView({ behavior: "smooth" })
+	//}, [history])
+	//
 	const handleKeyDown = (e) => {
 		if (isTyping) return
 
@@ -121,7 +121,6 @@ const TerminalContent = () => {
 				<div className="terminal-line command">
 					<span className="prompt">$ </span>
 					{typingText}
-					{showCursor && <span className="cursor">|</span>}
 				</div>
 			) : (
 				<div className="terminal-input-line">
@@ -134,7 +133,6 @@ const TerminalContent = () => {
 						onKeyDown={handleKeyDown}
 						autoFocus
 					/>
-					{showCursor && currentCommand.length === 0 && <span className="cursor">|</span>}
 				</div>
 			)}
 

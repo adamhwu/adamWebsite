@@ -1,0 +1,57 @@
+---
+const skills = [
+  { name: 'HTML & CSS', level: 90 },
+  { name: 'JavaScript', level: 85 },
+  { name: 'TypeScript', level: 80 },
+  { name: 'React', level: 85 },
+  { name: 'Node.js', level: 75 },
+  { name: 'Astro', level: 70 },
+];
+---
+
+<section id="about" class="py-20 bg-white dark:bg-gray-800">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-16">
+      About Me
+    </h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+          Who I Am
+        </h3>
+        <p class="text-gray-700 dark:text-gray-300 mb-6">
+          I'm a passionate web developer with over 5 years of experience creating modern, responsive websites and applications. I specialize in front-end development with a focus on creating intuitive user experiences.
+        </p>
+        <p class="text-gray-700 dark:text-gray-300 mb-6">
+          My journey in web development started when I was in college, and since then, I've been constantly learning and improving my skills to stay up-to-date with the latest technologies and best practices.
+        </p>
+        <p class="text-gray-700 dark:text-gray-300">
+          When I'm not coding, you can find me hiking, reading, or experimenting with new recipes in the kitchen.
+        </p>
+      </div>
+      
+      <div>
+        <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
+          My Skills
+        </h3>
+        
+        <div class="space-y-6">
+          {skills.map(skill => (
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-gray-700 dark:text-gray-300">{skill.name}</span>
+                <span class="text-gray-700 dark:text-gray-300">{skill.level}%</span>
+              </div>
+              <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full" style={`width: ${skill.level}%`}></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
