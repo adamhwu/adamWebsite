@@ -21,7 +21,7 @@ More specifically I am interested in FPGA development, hardware accelerators, an
 2. Profilometer - Open-source tool for UC Davis' Pavement Research Center
 3. Weather App - Using OpenWeather API
 4. Personal Portfolio - A terminal-themed website (you're looking at it!)
-  
+
 Type 'contact' to see how you can reach out about these projects.`,
 	contact: `Get in touch:
 - Email: adamhw@uci.edu
@@ -97,7 +97,11 @@ const TerminalContent = () => {
 			// Process command
 			if (trimmedCommand === "clear") {
 				setHistory([])
-			} else {
+			}
+			else if (trimmedCommand === "./site") {
+				window.location.href = '/testpage'; // go to /dashboard
+			}
+			else {
 				const output =
 					commands[trimmedCommand] || `Command not found: ${trimmedCommand}. Type 'help' for available commands.`
 				setHistory((prev) => [...prev, { text: output, type: "output" }])

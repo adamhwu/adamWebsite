@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets';
+import headshot from '../images/headshot.jpeg';
+---
+<style>
+  .container {
+    display: flex;
+    gap: 5rem;
+    font-size:1.3em;
+  }
+
+  .body {
+    max-width: 50%;
+  }
+</style>
+
+<section>
+  <div class="container" style="display: flex;">
+    <div class="body">
+      <h1>
+        Hi, I'm <span>Adam Wu</span>
+      </h1>
+      <p>
+        Hello! I am a sophomore computer engineering student at UCI interested in computer architecture and lower level computing!
+More specifically I am interested in FPGA development, hardware accelerators, and machine learning.
+      </p>
+    </div>
+    <Image src={headshot} alt="A bird sitting on a nest of eggs." height="300"/>
+  </div>
+</section>
+
