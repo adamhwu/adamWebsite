@@ -52,7 +52,7 @@ const TerminalContent = () => {
 					setTypingText(initialText.substring(0, typingIndex + 1))
 					setTypingIndex(typingIndex + 1)
 				},
-				50 + Math.random() * 30,
+				20 + Math.random() * 30,
 			)
 
 			return () => clearTimeout(timeout)
@@ -99,7 +99,7 @@ const TerminalContent = () => {
 				setHistory([])
 			}
 			else if (trimmedCommand === "./site") {
-				window.location.href = '/testpage'; // go to /dashboard
+				window.location.href = '/Traditional'; // go to /dashboard
 			}
 			else {
 				const output =
